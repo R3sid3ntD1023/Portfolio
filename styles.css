@@ -109,8 +109,12 @@ input[type=submit]:hover {
     background-color: rgb(79, 79, 79);
 }
 
-.footer img {
-    width: 30px;
-    height: 30px;
+#projects iframe {
+    border: none;
+}
+
+.footer a .icon {
+    width: 40px;
+    height: auto;
     padding-left: 1%;
 }
