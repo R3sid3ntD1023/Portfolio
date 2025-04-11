@@ -1,38 +1,30 @@
+@charset "UTF-8";
+
 body {
-    background-color: darkgrey;
-    margin: 0;
+    background-color: rgb(27, 27, 27);
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+#nav {
+    background-color: rgba(27, 27, 27, .8);
 }
 
 .header {
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(31, 31, 31);
     text-align: center;
-    padding: 20px;
     color: white;
 }
-
-.topnav {
-    overflow: hidden;
-    background-color: rgb(58, 58, 58);
-}
-
-.topnav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.topnav a:hover {
-    background-color: white;
-    color: black;
-}
-
 
 #highlight a img {
-    width: 25%;
+    width: 60%;
     height: auto;
+    border: 2px solid white;
+    border-radius: 1%;
 }
 
 #highlight a {
@@ -42,16 +34,79 @@ body {
 }
 
 section {
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(47, 47, 47);
     color: white;
     text-align: center;
-    padding: 10px;
+    display: block;
+    padding: 1% 0 1% 0;
+}
+
+.section_header {
+    background-color: rgb(38, 38, 38);
+    padding: 1% 0;
 }
 
 .footer {
     background-color: rgb(51, 51, 51);
     padding: 10px;
     text-align: center;
+}
+
+.icon {
+    text-decoration: none;
+}
+
+.table {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(47, 47, 47);
+    justify-content: center;
+}
+
+.table>div {
+    padding: 10px;
+    text-align: center;
+}
+
+#subject {
+    height: 170px;
+}
+
+#contact {
+    border-radius: 5px;
+    background-color: rgb(42, 42, 42);
+    border: 1px solid white;
+    width: 75%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+input[type=text],
+select,
+textarea {
+    background-color: rgb(57, 57, 57);
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    width: 100%;
+}
+
+input[type=submit] {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(79, 79, 79);
 }
 
 .footer img {

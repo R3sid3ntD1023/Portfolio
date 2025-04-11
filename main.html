@@ -1,55 +1,84 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html> 
+<html lang="en">
 <head>
     <title>Darius Bigbee</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body id="main">
-    <div class="topnav">
-        <a href="">Darius Bigbee</a>
-        <a href="">Highlights</a>
-        <a href="">Resume</a>
-        <a href="">Contact</a>
-    </div>
-    <div>
-        <section class="header">
-            <h1>About Me</h1>
-            <div>
-                Hi, I'm Darius.
-                I completed my education at Purdue University with my master's in computer graphics, after completing my
-                Bachelor of Science degree in the same field. My goal is to leverage my skills and knowledge in computer
-                graphics to create innovative solutions that can benefit various industries and communities.
+    <nav class="navbar navbar-inverse navbar-fixed-top transparent" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Darius Bigbee</a>
             </div>
-        </section>
-        <section id="highlight">
-            <h1>Highlighted Project</h1>
-            <a href=""><img src="images/projects/bhive/editor.png"></a>
-            <p>
-                BHive Engine is a game engine I created from scratch in C++; It is one of my personal projects that I
-                love to work on. To see its features click the image.
-            </p>
-            <a href="">Read More...</a>
-        </section>
-        <section id="personalwork">
-            <h1>Personal Work</h1>
-        </section>
-        <section id="Contact">
-            <h1>Contact Me</h1>
-            <p>Feel free to send me a message here:</p>
-        </section>
-    </div>
-    <div class="footer">
-        <a href="https://github.com/R3sid3ntD1023" target="_blank">
-            <img src="images/logos/github-mark-white.png" alt="github">
-        </a>
-        <a href="https://www.linkedin.com/in/dariusbigbee" target="_blank">
-            <img src="images/logos/InBug-White.png" alt="linkedin">
-        </a>
-    </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#highlight">Highlights</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="resume/DariusBigbeeResume.pdf" target="_blank" type="pdf">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+               </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div>
+            <section class="header">
+                <h1>About Me</h1>
+                <div>
+                    Hi, I'm Darius.
+                    I completed my education at Purdue University with my master's in computer graphics, after completing my
+                    Bachelor of Science degree in the same field. My goal is to leverage my skills and knowledge in computer
+                    graphics to create innovative solutions that can benefit various industries and communities.
+                </div>
+            </section>
+            <section id="highlight">
+                <h1 class ="section_header">Highlighted Project</h1>
+                <a href=""><img src="images/projects/bhive/editor.png" alt="editor.png"></a>
+                <p>
+                    BHive Engine is a game engine I created from scratch in C++; It is one of my personal projects that I
+                    love to work on. To see its features click the image.
+                </p>
+                <a href="">Read More...</a>
+            </section>
+            <section id="projects">
+                <h1 class ="section_header">Projects</h1>
+                <div class="table">
+                    <div class="column">Item1</div>
+                    <div class="column">Item2</div>
+                    <div class="column">Item3</div>
+                    <div class="column">Item4</div>
+                </div>
+            </section>
+            <section>
+                <h1 class ="section_header">Contact Me</h1>
+                <div id="contact">
+                    <div>
+                        <form>
+                            <label for="fname">Name</label>
+                            <input type="text" id="fname" placeholder="Name...">
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Message..."></textarea>
+                            <input type="submit" value="submit">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="footer">
+            <a class="icon" href="https://github.com/R3sid3ntD1023" target="_blank">
+                <img src="images/logos/github-mark-white.png" alt="github">
+            </a>
+            <a class="icon" href="https://www.linkedin.com/in/dariusbigbee" target="_blank">
+                <img src="images/logos/InBug-White.png" alt="linkedin">
+            </a>
+        </div>
+    </div> 
 </body>
 
 </html>
