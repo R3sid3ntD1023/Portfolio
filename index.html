@@ -2,67 +2,58 @@
 <html lang="en">
 
 <head>
-    <title>Darius Bigbee</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <h1>Graphics Programmer | Game Engine Developer</h1>
+
 </head>
 
 <body id="main">
-    <nav class="navbar navbar-inverse navbar-fixed-top transparent" id="nav">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Darius Bigbee</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="linkedIn">LinkedIn</a></li>
-            </ul>
-        </div>
-    </nav>
-
+    <script id="navigation_bar" src="js/navigation.js"></script>
     <div class="content">
         <div>
             <section class="header">
-                <h2>About Me</h2>
                 <div>
-                    <p>
-                        I'm a Computer Graphics Engineer with a Master's degree in Computer Graphics Technology from
-                        Purdue
-                        University. My interests focus on graphics programming, rendering systems, game engine
-                        architecture,
-                        and real-time interactive applications. I am currently developing a custom C++ game engine
-                        featuring
-                        a Vulkan renderer, ECS architecture, PhysX integration, animation systems, and modern rendering
-                        techniques. I enjoy solving complex technical problems and building tools that enable immersive
-                        experiences.
-                    </p>
+                    <h1>Darius Bigbee</h1>
+                    <h4>Graphics Programmer | Game Engine Developer</h4>
+                </div>
+                <div id="AboutMe">
+                    <h3>About Me</h3>
+                    <div>
+                        <p>
+                            I'm a Computer Graphics Engineer with a Master's degree in Computer Graphics Technology from
+                            Purdue
+                            University. My interests focus on graphics programming, rendering systems, game engine
+                            architecture,
+                            and real-time interactive applications. I am currently developing a custom C++ game engine
+                            featuring
+                            a Vulkan renderer, ECS architecture, PhysX integration, animation systems, and modern
+                            rendering
+                            techniques. I enjoy solving complex technical problems and building tools that enable
+                            immersive
+                            experiences.
+                        </p>
+                    </div>
                 </div>
             </section>
-            <section id="highlight">
-                <h1 class="section_header">Highlights</h1>
-                <div>
-                    <li>M.S. Computer Graphics Technology</li>
-                    <li>Custom C++ Game Engine</li>
-                    <li>Vulkan Renderer</li>
-                    <li>Physx Intergration</li>
-                    <li>ECS Architecture</li>
-                    <li>Render Graph</li>
-                    <li>Scene Graph</li>
-                    <li>Animation System</li>
-                    <li>2nd Place Innovation Hackathon</li>
-                </div>
-            </section>
-            <section id="technical focus">
-                <h1 class="section_header">Projects</h1>
+            <section id="skills">
                 <div class="table">
+                    <div class="column">
+                        <h2>HighLights</h2>
+                        <li>M.S. Computer Graphics Technology</li>
+                        <li>Custom C++ Game Engine</li>
+                        <li>Vulkan Renderer</li>
+                        <li>Physx Intergration</li>
+                        <li>ECS Architecture</li>
+                        <li>Render Graph</li>
+                        <li>Scene Graph</li>
+                        <li>Animation System</li>
+                        <li>2nd Place Innovation Hackathon</li>
+                    </div>
                     <div class="column">
                         <h2>Technical Focus</h2>
                         <li>Graphics Programming</li>
@@ -76,28 +67,15 @@
                 <h1 class="section_header">Latest Work</h1>
             </section>
             <section>
-                <h1 class="section_header">Contact Me</h1>
-                <div id="contact">
-                    <div>
-                        <form>
-                            <label for="fname">Name</label>
-                            <input type="text" id="fname" placeholder="Name...">
-                            <label for="subject">Subject</label>
-                            <textarea id="subject" name="subject" placeholder="Message..."></textarea>
-                            <input type="submit" value="submit">
-                        </form>
-                    </div>
-                </div>
+                <h4>Contact</h4>
+                <a>Engine Repositiory</a>
+                <a>GitHub</a>
+                <a>Resume</a>
+                <a>LinkedIn</a>
+                <p>Email : dariusbigbee12@gmail.com</p>
             </section>
         </div>
-        <div class="footer">
-            <a href="https://github.com/R3sid3ntD1023" target="_blank">
-                <img class="icon" src="images/logos/github-mark-white.png" alt="github">
-            </a>
-            <a href="https://www.linkedin.com/in/dariusbigbee" target="_blank">
-                <img class="icon" src="images/logos/InBug-White.png" alt="linkedin">
-            </a>
-        </div>
+        <script id="footer" src="js/navigation.js"></script>
     </div>
 </body>
 
