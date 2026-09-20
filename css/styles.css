@@ -7,8 +7,9 @@ body {
 }
 
 .content {
-    margin-top: 50px;
+    margin: 5% 10%;
 }
+
 
 #nav {
     background-color: rgba(27, 27, 27, .8);
@@ -57,14 +58,14 @@ section {
 
 .table {
     display: grid;
-    gap: 10px;
-    grid-template-columns: auto auto auto;
-    background-color: rgb(47, 47, 47);
+    gap: 5%;
+    grid-template-columns: auto auto;
+    background-color: rgb(43, 43, 43);
     justify-content: center;
+    padding: 50px;
 }
 
-.table>div {
-    padding: 10px;
+.table .column {
     text-align: left;
 }
 
@@ -79,6 +80,17 @@ section {
     width: 75%;
     margin: 0 auto;
     padding: 30px;
+}
+
+#AboutMe p {
+    width: 50%;
+    text-align: left;
+    display: inline-block;
+}
+
+#Contact a {
+    color: gold;
+    padding: 5pt;
 }
 
 input[type=text],
