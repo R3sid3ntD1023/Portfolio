@@ -15,16 +15,12 @@
 <body>
     <script id="navigation_bar" src="js/navigation.js"></script>
     <div class="content">
-        <div class="project" style="
-        background-color: rgb(44, 44, 44); 
-        color: white;
-        text-align: center;
-        padding: 10px;
-        ">
-            <a href="#"><img id="image" src="" alt="project"></a>
-            <h5 id="title">Project Name</h5>
-            <p id="description">Description</p>
-        </div>
+        <section class="gallery" aria-labelledby="art-heading">
+            <h1 id="art-heading">Art &amp; Creative Work</h1>
+            <div id="gallery-content"></div>
+        </section>
     </div>
+    <script src="js/gallery.js"></script>
+    <script>BuildGallery('images');</script>
     <script id="footer" src="js/navigation.js"></script>
 </body>

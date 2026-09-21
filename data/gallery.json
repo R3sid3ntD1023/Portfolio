@@ -1,0 +1,92 @@
+{
+  "images/projects": [
+    {
+      "title": "BHive Engine",
+      "groups": [
+        {
+          "title": "Editors & Content",
+          "items": [
+            { "file": "bhive/AssetWindow.png", "name": "Asset Window", "description": "An asset management view for locating and organizing engine resources." },
+            { "file": "bhive/ContentBrowser.png", "name": "Content Browser", "description": "A content browser for navigating project assets inside the BHive editor." },
+            { "file": "bhive/FlipbookEditor.png", "name": "Flipbook Editor", "description": "A flipbook editor for arranging animated sprite frames and previewing playback." },
+            { "file": "bhive/InputEditor.png", "name": "Input Editor", "description": "Input mapping tools for defining the controls used by a game or interactive application." },
+            { "file": "bhive/SpriteEditor.png", "name": "Sprite Editor", "description": "Sprite editing tools for inspecting and preparing 2D assets." },
+            { "file": "bhive/SpriteSheetEditor.png", "name": "Sprite Sheet Editor", "description": "A sprite sheet workflow for selecting frames and preparing 2D animation data." },
+            { "file": "bhive/TextureEditor.png", "name": "Texture Editor", "description": "Texture inspection and editing tools within the BHive asset workflow." }
+          ]
+        },
+        {
+          "title": "Components",
+          "items": [
+            { "file": "bhive/Components.png", "name": "Components", "description": "An entity component workflow for assembling objects from reusable engine systems." },
+            { "file": "bhive/BoxComponent.png", "name": "Box Component", "description": "Component authoring tools for adding box-shaped geometry and collision to an entity." },
+            { "file": "bhive/CapsuleComponent.png", "name": "Capsule Component", "description": "Capsule component controls for building character and collision objects." },
+            { "file": "bhive/SphereComponent.png", "name": "Sphere Component", "description": "Sphere component controls for creating round geometry and collision objects." },
+            { "file": "bhive/SpriteComponent.png", "name": "Sprite Component", "description": "Sprite component tooling for placing 2D visuals in a scene." },
+            { "file": "bhive/TextComponent.png", "name": "Text Component", "description": "Text component controls for placing readable labels and UI content in a scene." }
+          ]
+        },
+        {
+          "title": "Scenes & Engine",
+          "items": [
+            { "file": "bhive/SolarSystem.png", "name": "Solar System", "description": "A rendered solar system scene demonstrating scene composition and engine rendering." },
+            { "file": "bhive/TestWorld.png", "name": "Test World", "description": "A test world used to exercise scene editing and runtime systems." },
+            { "file": "bhive/editor.png", "name": "BHive Editor", "description": "The BHive editor workspace combining project tools, scene editing, and content management." },
+            { "file": "bhive/level_editor.png", "name": "Level Editor", "description": "Level editing tools for composing interactive worlds and arranging scene entities." }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Unity Dialogue Study",
+      "items": [
+        { "file": "DialogueGraph.png", "name": "Dialogue Graph", "description": "A node-based dialogue graph for designing branching conversations and organizing narrative flow." },
+        { "file": "DialogueNodeEditor.png", "name": "Dialogue Node Editor", "description": "An editor for authoring dialogue nodes, configuring their content, and connecting conversation paths." },
+        { "file": "Test.png", "name": "Project Test", "description": "A project test scene used to validate gameplay systems and editor workflow." }
+      ]
+    },
+    {
+      "title": "Material Editor",
+      "items": [
+        { "file": "material_editor/Screenshot_1.png", "name": "Material Authoring", "description": "Material authoring tools for building shader properties and surface appearance." },
+        { "file": "material_editor/Screenshot_2.png", "name": "Material Configuration", "description": "Material configuration controls for tuning inputs and rendering behavior." },
+        { "file": "material_editor/Screenshot_3.png", "name": "Material Preview", "description": "A material preview workflow for evaluating surface changes while editing." },
+        { "file": "material_editor/Screenshot_4.png", "name": "Material Graph", "description": "A graph-based material workflow for connecting surface and shading operations." },
+        { "file": "material_editor/Screenshot_5.png", "name": "Material Properties", "description": "Material property controls for refining visual output and shader parameters." },
+        { "file": "material_editor/Screenshot_6.png", "name": "Material Output", "description": "The material editor output view showing the completed authoring workflow." }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "title": "2D Art",
+      "layout": "slider",
+      "items": [ ]
+    },
+    {
+      "title": "Props & Material Studies",
+      "layout": "slider",
+      "items": [
+        { "file": "art/props-material-studies/0300.png", "name": "0300", "description": "A digital composition exploring shape, contrast, and graphic presentation." },
+        { "file": "art/props-material-studies/Grenades.png", "name": "Grenades", "description": "A prop and material study focused on hard-surface forms, surface response, and presentation." },
+        { "file": "art/props-material-studies/Shotgun_0.png", "name": "Shotgun", "description": "A hard-surface prop study focused on modeling detail, materials, and rendered presentation." }
+      ]
+    },
+    {
+      "title": "Substance Designer Studies",
+      "layout": "slider",
+      "items": [
+        { "file": "art/substance-designer-studies/Railroad.png", "name": "Railroad", "description": "An environment material study exploring composition, surface detail, and atmospheric depth." },
+        { "file": "art/substance-designer-studies/Signal(3)_Green.png", "name": "Signal Green", "description": "A green signal design study exploring readable color and lighting variations." },
+        { "file": "art/substance-designer-studies/Signal(3)_Red.png", "name": "Signal Red", "description": "A red signal design study exploring readable color and lighting variations." },
+        { "file": "art/substance-designer-studies/Signal(3)_Yellow (1).png", "name": "Signal Yellow", "description": "A yellow signal design study exploring readable color and lighting variations." },
+        { "file": "art/substance-designer-studies/Signal(3)_Yellow.png", "name": "Signal Yellow Variant", "description": "An alternate yellow signal study comparing shape and lighting treatment." },
+        { "file": "art/substance-designer-studies/Signal(4)_Arrows.png", "name": "Signal Arrows", "description": "A directional signal study focused on communicating movement with graphic shapes." },
+        { "file": "art/substance-designer-studies/Signal(4)_Arrows_Green.png", "name": "Signal Arrows Green", "description": "A green directional signal study combining arrow forms with lighting." },
+        { "file": "art/substance-designer-studies/Signal(5)_Var0.png", "name": "Signal Variant 0", "description": "A signal design variation exploring modular forms and visual readability." },
+        { "file": "art/substance-designer-studies/Signal(5)_Var1.png", "name": "Signal Variant 1", "description": "A second signal design variation exploring modular forms and visual readability." },
+        { "file": "art/substance-designer-studies/Signal(Base).png", "name": "Signal Base", "description": "A base signal design used to explore shape language and visual hierarchy." }
+      ]
+    }
+  ]
+}

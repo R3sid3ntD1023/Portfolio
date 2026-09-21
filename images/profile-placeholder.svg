@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">Profile photo placeholder</title>
+  <desc id="desc">A dark circular placeholder for a professional profile photo.</desc>
+  <rect width="480" height="480" fill="#202830"/>
+  <circle cx="240" cy="190" r="86" fill="#63d3c5" opacity=".85"/>
+  <path d="M92 430c18-98 79-148 148-148s130 50 148 148" fill="#63d3c5" opacity=".85"/>
+  <text x="240" y="458" fill="#101418" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">YOUR PHOTO</text>
+</svg>
