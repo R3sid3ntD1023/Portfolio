@@ -13,6 +13,11 @@
       "json": "sub-galleries/2d-art.json"
     },
     {
+      "title": "3D Art",
+      "layout": "slider",
+      "json": "sub-galleries/3d-art.json"
+    },
+    {
       "title": "Props & Material Studies",
       "layout": "slider",
       "json": "sub-galleries/props-material-studies.json"

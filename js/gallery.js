@@ -223,7 +223,7 @@ function createGrid(directory, items) {
     return gallery;
 }
 
-function createSubsection(directory, { title, items, layout = "slider" }) {
+function createSubsection(directory, { title, items, description, details, url, linkLabel, layout = "slider" }) {
     const subsection = document.createElement("div");
     subsection.className = "gallery-subsection";
 
@@ -231,9 +231,38 @@ function createSubsection(directory, { title, items, layout = "slider" }) {
     heading.className = "gallery-subsection-title";
     heading.textContent = title;
     subsection.appendChild(heading);
-    subsection.appendChild(layout === "slider"
-        ? createSlider(directory, title, items)
-        : createGrid(directory, items));
+
+    if (layout === "text") {
+        const summary = document.createElement("p");
+        summary.className = "gallery-text-description";
+        summary.textContent = description || "";
+        subsection.appendChild(summary);
+
+        if (Array.isArray(details) && details.length > 0) {
+            const detailList = document.createElement("ul");
+            detailList.className = "gallery-text-details";
+            details.forEach((detail) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = detail;
+                detailList.appendChild(listItem);
+            });
+            subsection.appendChild(detailList);
+        }
+
+        if (url) {
+            const projectLink = document.createElement("a");
+            projectLink.className = "text-link gallery-project-link";
+            projectLink.href = url;
+            projectLink.target = "_blank";
+            projectLink.rel = "noopener noreferrer";
+            projectLink.textContent = linkLabel || "View project";
+            subsection.appendChild(projectLink);
+        }
+    } else {
+        subsection.appendChild(layout === "slider"
+            ? createSlider(directory, title, items)
+            : createGrid(directory, items));
+    }
     return subsection;
 }
 

@@ -1,0 +1,46 @@
+{
+    "title": "3D Art",
+    "layout": "slider",
+    "items": [
+        {
+            "file": "https://cdna.artstation.com/p/assets/images/images/063/426/458/large/darius-bigbee-guitaramp-details.jpg?1685506594",
+            "name": "Guitar Amplifier Detail 1",
+            "description": ""
+        },
+        {
+            "file": "https://cdna.artstation.com/p/assets/images/images/063/426/450/large/darius-bigbee-guitaramp-details-1.jpg?1685506570",
+            "name": "Guitar Amplifier Detail 2",
+            "description": ""
+        },
+        {
+            "file": "https://cdnb.artstation.com/p/assets/images/images/063/426/461/large/darius-bigbee-guitaramp-details-wireframe.jpg?1685506600",
+            "name": "Guitar Amplifier Wireframe 1",
+            "description": ""
+        },
+        {
+            "file": "https://cdnb.artstation.com/p/assets/images/images/063/426/457/large/darius-bigbee-guitaramp-details-1-wireframe.jpg?1685506587",
+            "name": "Guitar Amplifier Wireframe 2",
+            "description": ""
+        },
+        {
+            "file": "https://cdnb.artstation.com/p/assets/images/images/063/420/701/large/darius-bigbee-guitar.jpg?1685487295",
+            "name": "Guitar Game Asset",
+            "description": ""
+        },
+        {
+            "file": "https://cdna.artstation.com/p/assets/images/images/063/420/706/large/darius-bigbee-guitar-dials.jpg?1685487302",
+            "name": "Guitar Dials",
+            "description": ""
+        },
+        {
+            "file": "https://cdnb.artstation.com/p/assets/images/images/063/420/713/large/darius-bigbee-guitar-frets.jpg?1685487307",
+            "name": "Guitar Frets",
+            "description": ""
+        },
+        {
+            "file": "https://cdnb.artstation.com/p/assets/images/images/063/420/715/large/darius-bigbee-guitar-top.jpg?1685487313",
+            "name": "Guitar Top",
+            "description": ""
+        }
+    ]
+}

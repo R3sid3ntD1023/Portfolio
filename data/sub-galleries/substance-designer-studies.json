@@ -2,15 +2,15 @@
     "title": "Substance Designer Studies",
     "layout": "slider",
     "items": [
-        { "file": "art/substance-designer-studies/Railroad.png", "name": "Railroad", "description": "An environment material study exploring composition, surface detail, and atmospheric depth." },
-        { "file": "art/substance-designer-studies/Signal(3)_Green.png", "name": "Signal Green", "description": "A green signal design study exploring readable color and lighting variations." },
-        { "file": "art/substance-designer-studies/Signal(3)_Red.png", "name": "Signal Red", "description": "A red signal design study exploring readable color and lighting variations." },
-        { "file": "art/substance-designer-studies/Signal(3)_Yellow (1).png", "name": "Signal Yellow", "description": "A yellow signal design study exploring readable color and lighting variations." },
-        { "file": "art/substance-designer-studies/Signal(3)_Yellow.png", "name": "Signal Yellow Variant", "description": "An alternate yellow signal study comparing shape and lighting treatment." },
-        { "file": "art/substance-designer-studies/Signal(4)_Arrows.png", "name": "Signal Arrows", "description": "A directional signal study focused on communicating movement with graphic shapes." },
-        { "file": "art/substance-designer-studies/Signal(4)_Arrows_Green.png", "name": "Signal Arrows Green", "description": "A green directional signal study combining arrow forms with lighting." },
-        { "file": "art/substance-designer-studies/Signal(5)_Var0.png", "name": "Signal Variant 0", "description": "A signal design variation exploring modular forms and visual readability." },
-        { "file": "art/substance-designer-studies/Signal(5)_Var1.png", "name": "Signal Variant 1", "description": "A second signal design variation exploring modular forms and visual readability." },
-        { "file": "art/substance-designer-studies/Signal(Base).png", "name": "Signal Base", "description": "A base signal design used to explore shape language and visual hierarchy." }
+        { "file": "https://cdnb.artstation.com/p/assets/images/images/093/073/615/large/darius-bigbee-railrox.webp?1761523344", "name": "Railroad", "description": "" },
+        { "file": "https://cdna.artstation.com/p/assets/images/images/093/073/616/large/darius-bigbee-signal-3-green.webp?1761523346", "name": "Signal Green", "description": "" },
+        { "file": "https://cdna.artstation.com/p/assets/images/images/093/073/618/large/darius-bigbee-signal-3-red.webp?1761523350", "name": "Signal Red", "description": "" },
+        { "file": "https://cdna.artstation.com/p/assets/images/images/093/073/620/large/darius-bigbee-signal-3-yellow-1.webp?1761523354", "name": "Signal Yellow", "description": "" },
+        { "file": "https://cdnb.artstation.com/p/assets/images/images/093/073/621/large/darius-bigbee-signal-3-yellow.webp?1761523356", "name": "Signal Yellow Variant", "description": "" },
+        { "file": "https://cdna.artstation.com/p/assets/images/images/093/073/622/large/darius-bigbee-signal-4-arrows.webp?1761523359", "name": "Signal Arrows", "description": "" },
+        { "file": "https://cdnb.artstation.com/p/assets/images/images/093/073/623/large/darius-bigbee-signal-4-arrows-green.webp?1761523362", "name": "Signal Arrows Green", "description": "" },
+        { "file": "https://cdna.artstation.com/p/assets/images/images/093/073/626/large/darius-bigbee-signal-5-var0.webp?1761523364", "name": "Signal Variant 0", "description": "" },
+        { "file": "https://cdnb.artstation.com/p/assets/images/images/093/073/627/large/darius-bigbee-signal-5-var1.webp?1761523367", "name": "Signal Variant 1", "description": "" },
+        { "file": "https://cdna.artstation.com/p/assets/images/images/093/073/628/large/darius-bigbee-signal-base.webp?1761523370", "name": "Signal Base", "description": "" }
     ]
 }

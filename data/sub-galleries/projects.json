@@ -45,6 +45,26 @@
                 { "file": "material_editor/Screenshot_5.png", "name": "Material Properties", "description": "Material property controls for refining visual output and shader parameters." },
                 { "file": "material_editor/Screenshot_6.png", "name": "Material Output", "description": "The material editor output view showing the completed authoring workflow." }
             ]
+        },
+        {
+            "title": "Wave Parser",
+            "layout": "text",
+            "description": "Developed a WAV parsing library for my custom game engine that extracts audio sample data and reads embedded ID3 metadata when available. The parsed metadata can provide custom sample loop points for playback.",
+            "details": [
+                "Supports ID3 version 2.3.0 tags.",
+                "Combines WAV parsing and ID3 tag support in one library; existing libraries I found handled ID3 parsing for MP3 files, not WAV."
+            ]
+        },
+        {
+            "title": "Top Down Adventure",
+            "layout": "text",
+            "description": "A 2D top-down adventure game built in Unity, featuring quest and dialogue systems to support objective progression and in-game conversations.",
+            "details": [
+                "Quest system for structuring and tracking player objectives.",
+                "Dialogue system for presenting in-game conversations."
+            ],
+            "url": "https://github.com/R3sid3ntD1023/TopDownAdventure",
+            "linkLabel": "View source on GitHub"
         }
     ]
 }
