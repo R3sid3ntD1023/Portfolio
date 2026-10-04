@@ -1,9 +1,114 @@
+function resolveGalleryImageUrl(directory, file) {
+    if (!file) {
+        return "";
+    }
+
+    if (/^https?:\/\//i.test(file) || file.startsWith("//") || file.startsWith("data:")) {
+        return file;
+    }
+
+    return `${directory}/${file}`;
+}
+
+function resolveGalleryReferenceUrl(basePath, reference) {
+    if (!reference) {
+        return "";
+    }
+
+    if (/^https?:\/\//i.test(reference) || reference.startsWith("//") || reference.startsWith("data:")) {
+        return reference;
+    }
+
+    const normalizedBasePath = basePath.replace(/\/$/, "");
+    return `${normalizedBasePath}/${reference.replace(/^\.?\//, "")}`;
+}
+
+async function fetchJson(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`JSON request failed with status ${response.status}.`);
+    }
+
+    return response.json();
+}
+
+async function loadExternalGallery(reference, basePath) {
+    const resolvedReference = resolveGalleryReferenceUrl(basePath, reference);
+    if (!resolvedReference) {
+        return { items: [] };
+    }
+
+    const payload = await fetchJson(resolvedReference);
+    if (Array.isArray(payload)) {
+        return { items: payload };
+    }
+
+    if (payload && Array.isArray(payload.items)) {
+        return payload;
+    }
+
+    if (payload && Array.isArray(payload.groups)) {
+        return payload;
+    }
+
+    return { items: [] };
+}
+
+function normalizeGalleryItems(items) {
+    if (!Array.isArray(items)) {
+        return [];
+    }
+
+    return items.flatMap((item) => {
+        if (!item || typeof item !== "object") {
+            return [];
+        }
+
+        if (Array.isArray(item.items)) {
+            return normalizeGalleryItems(item.items);
+        }
+
+        const hasGalleryFields = [
+            item.file,
+            item.name,
+            item.description,
+            item.supportLink,
+            item.support_url,
+            item.supportUrl,
+            item.link,
+            item.source,
+        ].some((value) => value !== undefined && value !== null && value !== "");
+
+        return hasGalleryFields ? [item] : [];
+    });
+}
+
+function getSupportLink(item) {
+    if (!item) {
+        return null;
+    }
+
+    const source = item.supportLink || item.support_url || item.supportUrl || item.link || item.source;
+    if (!source) {
+        return null;
+    }
+
+    const href = typeof source === "string" ? source : (source.href || source.url);
+    if (!href) {
+        return null;
+    }
+
+    const label = typeof source === "string" ? "Support this work" : (source.label || source.text || "Support this work");
+    return { href, label };
+}
+
 function createSlider(directory, title, items) {
+    const normalizedItems = normalizeGalleryItems(items);
     const slider = document.createElement("div");
     slider.className = "gallery-slider";
     slider.setAttribute("aria-label", `${title} gallery`);
 
-    if (items.length === 0) {
+    if (normalizedItems.length === 0) {
         const emptyMessage = document.createElement("p");
         emptyMessage.className = "gallery-empty";
         emptyMessage.textContent = "Artwork coming soon.";
@@ -21,7 +126,10 @@ function createSlider(directory, title, items) {
     const caption = document.createElement("figcaption");
     const itemHeading = document.createElement("h3");
     const itemDescription = document.createElement("p");
-    caption.append(itemHeading, itemDescription);
+    const supportAnchor = document.createElement("a");
+    supportAnchor.className = "gallery-support-link";
+    supportAnchor.hidden = true;
+    caption.append(itemHeading, itemDescription, supportAnchor);
     featured.append(featuredImage, caption);
 
     const thumbnails = document.createElement("div");
@@ -30,11 +138,24 @@ function createSlider(directory, title, items) {
     thumbnails.setAttribute("aria-label", `${title} artwork thumbnails`);
 
     const showItem = (index) => {
-        const item = items[index];
-        featuredImage.src = `${directory}/${item.file}`;
+        const item = normalizedItems[index];
+        featuredImage.src = resolveGalleryImageUrl(directory, item.file);
         featuredImage.alt = item.name;
         itemHeading.textContent = item.name;
-        itemDescription.textContent = item.description;
+        itemDescription.textContent = item.description || "";
+
+        const supportLink = getSupportLink(item);
+        if (supportLink) {
+            supportAnchor.href = supportLink.href;
+            supportAnchor.target = "_blank";
+            supportAnchor.rel = "noopener noreferrer";
+            supportAnchor.textContent = supportLink.label;
+            supportAnchor.hidden = false;
+        } else {
+            supportAnchor.removeAttribute("href");
+            supportAnchor.textContent = "";
+            supportAnchor.hidden = true;
+        }
 
         thumbnails.querySelectorAll("button").forEach((button, buttonIndex) => {
             const selected = buttonIndex === index;
@@ -43,7 +164,7 @@ function createSlider(directory, title, items) {
         });
     };
 
-    items.forEach(({ file, name }, index) => {
+    normalizedItems.forEach(({ file, name }, index) => {
         const thumbnail = document.createElement("button");
         thumbnail.className = "gallery-thumbnail";
         thumbnail.type = "button";
@@ -51,7 +172,7 @@ function createSlider(directory, title, items) {
         thumbnail.setAttribute("aria-label", `Show ${name}`);
 
         const thumbnailImage = document.createElement("img");
-        thumbnailImage.src = `${directory}/${file}`;
+        thumbnailImage.src = resolveGalleryImageUrl(directory, file);
         thumbnailImage.alt = "";
         thumbnailImage.loading = "lazy";
         thumbnail.appendChild(thumbnailImage);
@@ -65,14 +186,16 @@ function createSlider(directory, title, items) {
 }
 
 function createGrid(directory, items) {
+    const normalizedItems = normalizeGalleryItems(items);
     const gallery = document.createElement("div");
     gallery.className = "gallery-grid";
-    items.forEach(({ file, name, description }) => {
+    normalizedItems.forEach((item) => {
+        const { file, name, description } = item;
         const figure = document.createElement("figure");
         figure.className = "gallery-card";
 
         const image = document.createElement("img");
-        image.src = `${directory}/${file}`;
+        image.src = resolveGalleryImageUrl(directory, file);
         image.alt = name;
         image.loading = "lazy";
 
@@ -80,9 +203,20 @@ function createGrid(directory, items) {
         const itemHeading = document.createElement("h3");
         itemHeading.textContent = name;
         const itemDescription = document.createElement("p");
-        itemDescription.textContent = description;
+        itemDescription.textContent = description || "";
 
         caption.append(itemHeading, itemDescription);
+        const supportLink = getSupportLink(item);
+        if (supportLink) {
+            const supportAnchor = document.createElement("a");
+            supportAnchor.href = supportLink.href;
+            supportAnchor.target = "_blank";
+            supportAnchor.rel = "noopener noreferrer";
+            supportAnchor.className = "gallery-support-link";
+            supportAnchor.textContent = supportLink.label;
+            caption.appendChild(supportAnchor);
+        }
+
         figure.append(image, caption);
         gallery.appendChild(figure);
     });
@@ -123,8 +257,24 @@ async function BuildGallery(directory) {
             throw new Error(`No gallery is configured for "${directory}".`);
         }
 
+        const resolvedSections = await Promise.all((sections || []).map(async (section) => {
+            const reference = section && (section.json || section.itemsFile || section.source);
+            if (!reference) {
+                return section;
+            }
+
+            const externalSection = await loadExternalGallery(reference, "data");
+            return {
+                ...externalSection,
+                ...section,
+                items: section.items || externalSection.items || [],
+                groups: section.groups || externalSection.groups || [],
+            };
+        }));
+
         const content = document.createDocumentFragment();
-        sections.forEach(({ title, items, groups, layout = "grid" }) => {
+        for (const sectionData of resolvedSections) {
+            const { title, items, groups, layout = "grid" } = sectionData;
             const section = document.createElement("section");
             section.className = "gallery-section";
             section.setAttribute("aria-labelledby", `${directory.replace(/\W/g, "-")}-${title.replace(/\W/g, "-")}`);
@@ -134,20 +284,35 @@ async function BuildGallery(directory) {
             heading.textContent = title;
             section.appendChild(heading);
 
-            if (groups) {
+            if (groups && groups.length > 0) {
                 const groupContainer = document.createElement("div");
                 groupContainer.className = "gallery-subsections";
-                groups.forEach((group) => {
+                const resolvedGroups = await Promise.all((groups || []).map(async (group) => {
+                    const groupReference = group && (group.json || group.itemsFile || group.source);
+                    if (!groupReference) {
+                        return group;
+                    }
+
+                    const externalGroup = await loadExternalGallery(groupReference, "data");
+                    return {
+                        ...externalGroup,
+                        ...group,
+                        items: group.items || externalGroup.items || [],
+                        layout: group.layout || externalGroup.layout || "slider",
+                    };
+                }));
+
+                resolvedGroups.forEach((group) => {
                     groupContainer.appendChild(createSubsection(directory, group));
                 });
                 section.appendChild(groupContainer);
             } else {
                 section.appendChild(layout === "slider"
-                    ? createSlider(directory, title, items)
-                    : createGrid(directory, items));
+                    ? createSlider(directory, title, items || [])
+                    : createGrid(directory, items || []));
             }
             content.appendChild(section);
-        });
+        }
 
         container.replaceChildren(content);
     } catch (error) {

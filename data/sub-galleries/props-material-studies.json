@@ -1,0 +1,9 @@
+{
+    "title": "Props & Material Studies",
+    "layout": "slider",
+    "items": [
+        { "file": "art/props-material-studies/0300.png", "name": "0300", "description": "A digital composition exploring shape, contrast, and graphic presentation." },
+        { "file": "art/props-material-studies/Grenades.png", "name": "Grenades", "description": "A prop and material study focused on hard-surface forms, surface response, and presentation." },
+        { "file": "art/props-material-studies/Shotgun_0.png", "name": "Shotgun", "description": "A hard-surface prop study focused on modeling detail, materials, and rendered presentation." }
+    ]
+}

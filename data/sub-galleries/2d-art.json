@@ -1,0 +1,16 @@
+{
+    "title": "2D Art",
+    "layout": "slider",
+    "items": [
+        {
+            "file": "https://cdna.artstation.com/p/assets/images/images/095/080/946/large/darius-bigbee-pennywise.webp?1767577830",
+            "name": "Pennywise Caricature",
+            "description": ""
+        },
+        {
+            "file": "https://cdna.artstation.com/p/assets/images/images/095/081/052/large/darius-bigbee-pennywise-v2.webp?1767578129",
+            "name": "Pennywise Caricature V2",
+            "description": ""
+        }
+    ]
+}

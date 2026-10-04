@@ -1,0 +1,16 @@
+{
+    "title": "Substance Designer Studies",
+    "layout": "slider",
+    "items": [
+        { "file": "art/substance-designer-studies/Railroad.png", "name": "Railroad", "description": "An environment material study exploring composition, surface detail, and atmospheric depth." },
+        { "file": "art/substance-designer-studies/Signal(3)_Green.png", "name": "Signal Green", "description": "A green signal design study exploring readable color and lighting variations." },
+        { "file": "art/substance-designer-studies/Signal(3)_Red.png", "name": "Signal Red", "description": "A red signal design study exploring readable color and lighting variations." },
+        { "file": "art/substance-designer-studies/Signal(3)_Yellow (1).png", "name": "Signal Yellow", "description": "A yellow signal design study exploring readable color and lighting variations." },
+        { "file": "art/substance-designer-studies/Signal(3)_Yellow.png", "name": "Signal Yellow Variant", "description": "An alternate yellow signal study comparing shape and lighting treatment." },
+        { "file": "art/substance-designer-studies/Signal(4)_Arrows.png", "name": "Signal Arrows", "description": "A directional signal study focused on communicating movement with graphic shapes." },
+        { "file": "art/substance-designer-studies/Signal(4)_Arrows_Green.png", "name": "Signal Arrows Green", "description": "A green directional signal study combining arrow forms with lighting." },
+        { "file": "art/substance-designer-studies/Signal(5)_Var0.png", "name": "Signal Variant 0", "description": "A signal design variation exploring modular forms and visual readability." },
+        { "file": "art/substance-designer-studies/Signal(5)_Var1.png", "name": "Signal Variant 1", "description": "A second signal design variation exploring modular forms and visual readability." },
+        { "file": "art/substance-designer-studies/Signal(Base).png", "name": "Signal Base", "description": "A base signal design used to explore shape language and visual hierarchy." }
+    ]
+}

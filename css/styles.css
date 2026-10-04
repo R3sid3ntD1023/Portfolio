@@ -315,7 +315,7 @@ body {
     padding: clamp(18px, 3vw, 36px);
 }
 
-.gallery > h1 {
+.gallery>h1 {
     font-size: clamp(30px, 4vw, 42px);
     font-weight: 700;
     letter-spacing: -.03em;
@@ -503,6 +503,21 @@ body {
 .gallery-card p {
     color: var(--text-muted);
     margin: 0;
+}
+
+.gallery-support-link {
+    color: var(--accent);
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.gallery-support-link:hover,
+.gallery-support-link:focus {
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 @media (max-width: 600px) {
